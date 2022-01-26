@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+ <link rel="stylesheet" href="{{url_for('static',filename='sign.css')}}">
+    <title></title>
+  </head>
+  <body>
+    <section class="vh-100%" style="background-color: rgb(216, 147, 44);">
+        <div class="container vh-90%">
+          <div class="row d-flex justify-content-center align-items-center h-90">
+            <div class="col-lg-12 col-xl-8">
+              <div class="card text-black my-2 py-1" style="border-radius: 25px; background-color: #fff3f0be;"  >
+                <div class="card-body p-md-5">
+                  <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+      
+                      <p class="text-center h1 fw-bold mb-4 mx-1 mx-md-4 mt-4">Update your Information</p>
+      
+                      <form class="mx-1 mx-md-4"  method="POST" action="update">
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            
+                            <i class="fas fa-user fa-lg me-3 fa-fw mb-4"><img src="https://img.icons8.com/external-prettycons-solid-prettycons/30/000000/external-id-business-and-finance-prettycons-solid-prettycons.png"/></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <input type="text" id="form3Example1c" class="form-control" placeholder="ID" name="id" value="{{elist[0]}}" />
+                              <label class="form-label" for="form3Example1c"></label>
+                            </div>
+                          </div>
+      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            
+                          <i class="fas fa-user fa-lg me-3 fa-fw mb-4"><img src="https://img.icons8.com/material-rounded/30/000000/name.png"/></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="text" id="form3Example1c" class="form-control"  placeholder="Your Name" name="name" value="{{elist[1]}}"/>
+                            <label class="form-label" for="form3Example1c"></label>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-envelope fa-lg me-3 fa-fw mb-4"><img src="https://img.icons8.com/ios-glyphs/30/000000/contact-card.png"/></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="tel" id="form3Example3c" class="form-control" placeholder="contact number"  name="contact" value="{{elist[2]}}"/>
+                            <label class="form-label" for="form3Example3c"></label>
+                          </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-envelope fa-lg me-3 fa-fw mb-4"><img src="https://img.icons8.com/external-itim2101-fill-itim2101/30/000000/external-email-digital-marketing-itim2101-fill-itim2101.png"/></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="email" id="form3Example3c" class="form-control" placeholder="Your Email" name="email" value="{{elist[3]}}" />
+                            <label class="form-label" for="form3Example3c"></label>
+                          </div>
+                        </div>
+      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-lock fa-lg me-3 fa-fw mb-4"><img src="https://img.icons8.com/fluency-systems-regular/30/000000/username.png"/></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="text" id="form3Example4c" class="form-control" placeholder="Username" name="username" value="{{elist[4]}}"/>
+                            <label class="form-label" for="form3Example4c"></label>
+                          </div>
+                        </div>
+      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-key fa-lg me-3 fa-fw mb-4"><img src="https://img.icons8.com/material-rounded/30/000000/password.png"/></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="password" id="form3Example4cd" class="form-control" placeholder="password" name="password" value="{{elist[5]}}"/>
+                            <label class="form-label" for="form3Example4cd"></label>
+                          </div>
+                        </div>
+      
+                       
+      
+                        <div class=" col-10 d-flex justify-content-center mx-4  mb-3 mb-lg-4">
+                          <button  type="submit" value="update" class="btn btn-primary btn-lg mx-3">Update</button>
+                          
+                        
+                         <button type="reset" value="reset" class="btn btn-primary btn-lg ">Reset</button>
+                        </div>
+      
+                      </form>
+      
+                    </div>
+                    <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2 mb-3">
+      
+                      <img src="../static/o.jpg" class="img-fluid " alt="" style="opacity: 3px;">
+      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+   
+  </body>
+</html>
